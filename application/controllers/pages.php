@@ -10,7 +10,7 @@ class Pages extends CI_Controller{
 		
 	
 	public function index($page = ''){
-		$data['title'] = 'Pages';
+		$data['title'] 	= 'Pages';
 		
 		$data['pages']	=	$this->pages_model->get_pages();
 		
@@ -34,8 +34,7 @@ class Pages extends CI_Controller{
 		} else {
 			$new_page = $this->pages_model->set_page();
 			$data['insert_id'] = $new_page;
-			$data['success'] = 'Page '.$new_page.' created';
-			
+			//$data['success'] = 'Page '.$new_page.' created';
 			
 			$this->view($data['insert_id'], $data);
 			//redirect('pages/view/'.$data['insert_id'], $data);
@@ -78,7 +77,10 @@ class Pages extends CI_Controller{
 	
 	public function delete($page_id){
 		if(intval($page_id)){
-			$this->pages_model->delete_page($page_id);
+			if($this->pages_model->delete_page($page_id)){
+				
+			}
+			redirect('pages');
 		}
 	}
 }

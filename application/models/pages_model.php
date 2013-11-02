@@ -29,5 +29,13 @@ class pages_model extends CI_Model{
 		
 		return $insert_id;
 	}
+	
+	public function delete_page($id=0){
+		$id	=	intval($id);
+		if(!empty($id)){
+			$this->db->where('page_id', $id);
+			$this->db->delete('pages');
+		}
+	}
 }
 ?>
