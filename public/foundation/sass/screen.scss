@@ -1,0 +1,30 @@
+header{
+  min-width:100%;
+}
+
+#logo {
+  margin: 20px 30px;
+  position: relative;
+  width: 25%;
+  
+  &:before {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  &:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  
+}
+
+div.row {
+  outline:1px solid black !important;
+}
+
+.menu-icon img{
+  height:45px;
+  padding: 5px 0;
+}
