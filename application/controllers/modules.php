@@ -1,9 +1,9 @@
 <?php 
 
-class Modules extends CI_Controller{
+class Modules extends MY_Controller{
 	public function __construct(){
 		parent::__construct();
-		$this->load->modules_model();
+		$this->load->model('modules_model');
 	}
 	
 	public function get_menu(){
@@ -12,6 +12,6 @@ class Modules extends CI_Controller{
 		echo 'dwadawdw';
 		print_r($data);
 		
-		$this->load->render_view('templates/side_menu', $data);
+		$this->render_view('templates/side_menu', $data);
 	}
 }

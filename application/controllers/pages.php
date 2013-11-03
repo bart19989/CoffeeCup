@@ -1,6 +1,6 @@
 <?php
 	
-class Pages extends CI_Controller{
+class Pages extends MY_Controller{
 		
 	public function __construct(){
 		parent::__construct();
@@ -14,7 +14,7 @@ class Pages extends CI_Controller{
 		
 		$data['pages']	=	$this->pages_model->get_pages();
 		
-		$this->load->render_view('pages/index', $data);
+		$this->render_view('pages/index', $data);
 	}
 
 	public function create(){
@@ -72,7 +72,7 @@ class Pages extends CI_Controller{
 		var_dump($data);
 		
 		
-		$this->load->render_view('pages/view', $data);
+		$this->render_view('pages/view', $data);
 	}
 	
 	public function delete($page_id){

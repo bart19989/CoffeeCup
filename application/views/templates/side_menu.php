@@ -1,9 +1,8 @@
 
-	<?php	print_r($data); ?>
 <ul>
-<?php foreach($items as $item): ?>
+<?php foreach($menu as $item): ?>
 <li>
-	<?php echo $item['title'] ?>
+	<?php echo $item['name'] ?>
 </li>
 <?php endforeach ?>
 </ul>

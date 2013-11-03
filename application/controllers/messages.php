@@ -1,6 +1,6 @@
 <?php
 
-class messages extends CI_Controller{
+class messages extends MY_Controller{
 		
 	public function __construct(){
 		parent::__construct();
@@ -12,7 +12,7 @@ class messages extends CI_Controller{
 		$data['title'] = 'Messages';
 		$data['messages']	=	$this->messages_model->get_messages();
 		
-		$this->load->render_view('messages/index' , $data);
+		$this->render_view('messages/index' , $data);
 	}
 	
 	public function view($slug=''){
@@ -27,7 +27,7 @@ class messages extends CI_Controller{
 		}
 		
 			
-		$this->load->render_view('messages/view', $data);
+		$this->render_view('messages/view', $data);
 	}
 	
 	public function create(){
@@ -41,7 +41,7 @@ class messages extends CI_Controller{
 		$this->form_validation->set_rules('slug', 'Categorie', 'required');
 		
 		if($this->form_validation->run() === FALSE){
-			$this->load->render_view('messages/create', $data);
+			$this->render_view('messages/create', $data);
 		} else {
 			$this->messages_model->set_messages();
 			redirect('messages');
