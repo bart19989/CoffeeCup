@@ -1,7 +1,7 @@
 <nav class="top-bar">
 				<ul class="title-area">
 					<li class="name">
-						<h1><a href="#">Menu</a></h1>
+						<h1><a id="sidr-menu" href="#">Menu</a></h1>
 					</li>
 					<li class="toggle-topbar menu-icon">
 						<a href="#"><span>Weg</span></a>
